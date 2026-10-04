@@ -1,4 +1,3 @@
-JavaScript
 import { sequelize } from '../config/database.js';
 import { User } from './User.js';
 import { Todo } from './Todo.js';
@@ -7,10 +6,10 @@ import { Todo } from './Todo.js';
 User.hasMany(Todo,{
     foreignKey:'userId',
     as:'todos',
-    onDelete:'CACADE',
+    onDelete:'CASCADE',
 });
 
-Todo.belongTO(User,{
+Todo.belongsTo(User,{
     foreignKey:'userId',
     as:'user',
 });

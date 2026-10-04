@@ -24,7 +24,7 @@ export const User = sequelize.define('User',{
     },
     email:{
         type:DataTypes.STRING,
-        allowNull = false,
+        allowNull : false,
         unique:{
             msg:"כתובת האימייל כבר קיימת במערכת",
         },
